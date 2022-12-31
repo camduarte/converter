@@ -29,11 +29,11 @@ public class Currency {
 	}
 
 	/**
-	 * Sets the code.
-	 * 
-	 * @param code The currency code to set.
+	 * Initializes the currency code.
+	 * @param code The currency code.
 	 */
-	public void setCode(CurrencyCode code) {
+	public Currency(CurrencyCode code) {
 		this.code = code;
 	}
+
 }

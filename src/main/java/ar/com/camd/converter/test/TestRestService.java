@@ -1,5 +1,5 @@
 /**
- * Test.java
+ * TestRestService.java
  * 
  * @copyright 2022, Christian Ariel Modesto Duarte. All rights reserved.
  */
@@ -14,13 +14,13 @@ import ar.com.camd.converter.service.RestService;
 import ar.com.camd.converter.service.RestServiceImpl;
 
 /**
- * <code>Test</code>
+ * <code>TestRestService</code>
  * Class to test application functionality.
  * 
  * @author    Christian Ariel Modesto Duarte <duarte.camd@gmail.com>
  * @version  1.0.0-SNAPSHOT
  */
-public class Test{
+public class TestRestService {
 
 	public static void main(String[] args) {
 		String url = "https://www.alphavantage.co/query?";
