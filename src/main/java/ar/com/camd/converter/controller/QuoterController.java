@@ -5,6 +5,9 @@
  */
 package ar.com.camd.converter.controller;
 
+import ar.com.camd.converter.model.Currency;
+import ar.com.camd.converter.model.Quoter;
+
 /**
  * <code>QuoterController</code>
  * Encapsulates the quoter logic.
@@ -13,5 +16,16 @@ package ar.com.camd.converter.controller;
  * @version  1.0.0-SNAPSHOT
  */
 public class QuoterController {
+	
+	/**
+	 * Gets the quote with the exchange rate. 
+	 * 
+	 * @param fromCurrency The currency you would like to get the exchange rate for.
+	 * @param toCurrency The destination currency for the exchange rate.
+	 * @return The quote.
+	 */
+	public Quoter quote(Currency fromCurrency, Currency toCurrency) {
+		return null;
+	}
 
 }

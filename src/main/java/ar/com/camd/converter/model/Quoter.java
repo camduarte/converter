@@ -17,17 +17,17 @@ import java.math.BigDecimal;
 public class Quoter {
 	
 	/**
-	 * The currency from.
+	 * The currency you would like to get the exchange rate for.
 	 */
 	private Currency fromCurrency;
 	
 	/**
-	 * The currency to.
+	 * The destination currency for the exchange rate..
 	 */
 	private Currency toCurrency;
 	
 	/**
-	 * The exchange value. 
+	 * The exchange rate. 
 	 */
 	private BigDecimal exchangeRate;
 
