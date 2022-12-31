@@ -5,6 +5,8 @@
  */
 package ar.com.camd.converter.model;
 
+import java.math.BigDecimal;
+
 /**
  * <code>Quoter</code>
  * Provides quote information.
@@ -13,5 +15,20 @@ package ar.com.camd.converter.model;
  * @version  1.0.0-SNAPSHOT
  */
 public class Quoter {
+	
+	/**
+	 * The currency from.
+	 */
+	private Currency fromCurrency;
+	
+	/**
+	 * The currency to.
+	 */
+	private Currency toCurrency;
+	
+	/**
+	 * The exchange value. 
+	 */
+	private BigDecimal exchangeRate;
 
 }
