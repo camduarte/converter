@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="8.0" styleClass="container" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="8.0" styleClass="container" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ar.com.camd.converter.controller.ButtonConvertController">
    <children>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="8.0">
          <children>
@@ -21,7 +21,7 @@
       </VBox>
       <VBox alignment="CENTER" prefHeight="400.0" prefWidth="200.0" spacing="24.0">
          <children>
-            <ComboBox prefHeight="25.0" prefWidth="216.0" >
+            <ComboBox fx:id="fromCurrency" prefHeight="25.0" prefWidth="216.0" >
                 <items>
                     <FXCollections fx:factory="observableArrayList">
                         <String fx:value="ARS" />
@@ -43,12 +43,12 @@
                  </value>
             </ComboBox>
             <TextField />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="196.0" styleClass="btn" text="Convertir" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="196.0" styleClass="btn" text="Convertir" onAction="#convert" />
          </children>
       </VBox>
       <VBox alignment="CENTER" prefHeight="400.0" prefWidth="200.0" spacing="24.0">
          <children>
-            <ComboBox prefHeight="25.0" prefWidth="238.0" >
+            <ComboBox fx:id="toCurrency" prefHeight="25.0" prefWidth="238.0" >
                 <items>
                     <FXCollections fx:factory="observableArrayList">
                         <String fx:value="ARS" />
