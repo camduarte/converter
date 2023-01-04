@@ -15,7 +15,7 @@ import ar.com.camd.converter.model.Quoter;
  * @author	Christian Ariel Modesto Duarte <duarte.camd@gmail.com>
  * @version	1.0.0-SNAPSHOT
  */
-public class QuoteServiceImpl implements QuoterService {
+public class QuoteServiceImpl implements QuoteService {
 
 	@Override
 	public Quoter quote(CurrencyCode fromCurrency, CurrencyCode toCurrency) {
