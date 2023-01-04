@@ -5,7 +5,12 @@
  */
 package ar.com.camd.converter;
 
+import java.io.IOException;
+
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
@@ -17,18 +22,42 @@ import javafx.stage.Stage;
  */
 public class Launcher extends Application {
 
+	private static Scene scene;
+
 	@Override
-	public void start(Stage arg0) throws Exception {
-		// TODO Auto-generated method stub
-		
+	public void start(Stage stage) throws Exception {
+		stage.setTitle("camd | Conversor - menú");
+		scene = new Scene(loadFXML("converter-menu"), 535D, 265D);
+		scene.getStylesheets().add(getClass().getResource("./view/css/style.css").toExternalForm());
+		stage.setScene(scene);
+		stage.show();		
 	}
+
+	/**
+	 * Allows to switch the scene.
+	 * @param fxml The fxml to be loaded.
+	 * @throws IOException
+	 */
+    public static void setRoot(String fxml) throws IOException {
+        scene.setRoot(loadFXML(fxml));
+    }
+
+    /**
+     * Loads the fxml.
+     * @param fxml The fxml file name.
+     * @return Component nodes.
+     * @throws IOException
+     */
+    private static Parent loadFXML(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("./view/fxml/" + fxml + ".fxml"));
+        return fxmlLoader.load();
+    }
 
 	/**
 	 * Launches the application.
 	 * @param args The data to be used in the application.
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Launcher.launch();
 	}
-	
 }
