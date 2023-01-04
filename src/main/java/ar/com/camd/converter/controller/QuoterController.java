@@ -31,14 +31,13 @@ public class QuoterController {
 	private RestService<CurrencyExchange> restService;
 
 	/**
-	 * Gets the quote with the exchange rate. 
+	 * Gets the quote with the exchange rate.
 	 * 
 	 * @param fromCurrency The currency you would like to get the exchange rate for.
 	 * @param toCurrency The destination currency for the exchange rate.
 	 * @return The quote.
 	 */
 	public Quoter quote(CurrencyCode fromCurrency, CurrencyCode toCurrency) {
-
 		Quoter quote = new Quoter(new Currency(fromCurrency), new Currency(toCurrency));
 
 		String url = "https://www.alphavantage.co/query?";
@@ -58,5 +57,4 @@ public class QuoterController {
 		
 		return quote;
 	}
-
 }

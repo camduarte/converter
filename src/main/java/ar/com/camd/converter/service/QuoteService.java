@@ -18,11 +18,11 @@ import ar.com.camd.converter.model.Quoter;
 public interface QuoteService {
 
 	/**
-	 * Makes the quote.
+	 * Gets the quote with the exchange rate.
 	 * @param fromCurrency The currency code you would like to get the exchange rate for.
 	 * @param toCurrency The destination currency code for the exchange rate.
-	 * @return The Quoter with the information.
+	 * @return The Quote.
 	 */
 	public Quoter quote(CurrencyCode fromCurrency, CurrencyCode toCurrency);
-	
+
 }

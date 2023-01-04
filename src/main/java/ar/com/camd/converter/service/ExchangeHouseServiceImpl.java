@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 
 import ar.com.camd.converter.model.CurrencyCode;
 import ar.com.camd.converter.model.ExchangeHouse;
+import ar.com.camd.converter.model.Quoter;
 
 /**
  * <code>ExchangeHouseServiceImpl</code>
@@ -21,8 +22,12 @@ public class ExchangeHouseServiceImpl implements ExchangeHouseService {
 
 	@Override
 	public ExchangeHouse exchange(BigDecimal amount, CurrencyCode fromCurrency, CurrencyCode toCurrency) {
-		// TODO Auto-generated method stub
-		return null;
+		QuoteService quoteService = new QuoteServiceImpl();
+		Quoter quoter = quoteService.quote(fromCurrency, toCurrency);
+		
+		// Calculates the exchange amount
+		BigDecimal exchangeAmount = amount.multiply(quoter.getExchangeRate());
+		
+		return new ExchangeHouse(quoter, amount, exchangeAmount);
 	}
-
 }

@@ -56,6 +56,13 @@ public class Quoter {
 	}
 
 	/**
+	 * @return the exchangeRate
+	 */
+	public BigDecimal getExchangeRate() {
+		return exchangeRate;
+	}
+
+	/**
 	 * 
 	 * @param exchangeRate
 	 */
