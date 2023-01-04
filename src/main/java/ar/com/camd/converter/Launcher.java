@@ -22,15 +22,17 @@ import javafx.stage.Stage;
  */
 public class Launcher extends Application {
 
+	private static Stage stage;
 	private static Scene scene;
 
 	@Override
 	public void start(Stage stage) throws Exception {
+		Launcher.stage = stage; // To be accessed from another class and change the title.
 		stage.setTitle("camd | Conversor - menú");
 		scene = new Scene(loadFXML("converter-menu"), 535D, 265D);
 		scene.getStylesheets().add(getClass().getResource("./view/css/style.css").toExternalForm());
 		stage.setScene(scene);
-		stage.show();		
+		stage.show();	
 	}
 
 	/**
@@ -59,5 +61,12 @@ public class Launcher extends Application {
 	 */
 	public static void main(String[] args) {
 		Launcher.launch();
+	}
+
+	/**
+	 * @return the stage
+	 */
+	public static Stage getStage() {
+		return stage;
 	}
 }

@@ -1,17 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.collections.FXCollections?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="8.0" styleClass="container" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="407.0" prefWidth="600.0" text="Conversor de moneda" textAlignment="CENTER">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="8.0">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logo-no-background.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="200.0" spacing="24.0">
+         <children>
+            <ComboBox prefHeight="25.0" prefWidth="216.0" >
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="ARS" />
+                        <String fx:value="USD" />
+                        <String fx:value="EUR" />
+                        <String fx:value="JPY" />
+                        <String fx:value="GBP" />
+                        <String fx:value="KRW" />
+                        <String fx:value="RUB" />
+                        <String fx:value="CLP" />
+                        <String fx:value="UYU" />
+                        <String fx:value="PYG" />
+                        <String fx:value="BOB" />
+                        <String fx:value="BRL" />                        
+                    </FXCollections>
+                 </items>
+                 <value>
+                    <String fx:value="ARS" />
+                 </value>
+            </ComboBox>
+            <TextField />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="196.0" styleClass="btn" text="Convertir" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="200.0" spacing="24.0">
+         <children>
+            <ComboBox prefHeight="25.0" prefWidth="238.0" >
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="ARS" />
+                        <String fx:value="USD" />
+                        <String fx:value="EUR" />
+                        <String fx:value="JPY" />
+                        <String fx:value="GBP" />
+                        <String fx:value="KRW" />
+                        <String fx:value="RUB" />
+                        <String fx:value="CLP" />
+                        <String fx:value="UYU" />
+                        <String fx:value="PYG" />
+                        <String fx:value="BOB" />
+                        <String fx:value="BRL" />                        
+                    </FXCollections>
+                 </items>
+                 <value>
+                    <String fx:value="USD" />
+                 </value>
+            </ComboBox>
+            <TextField />
+            <Button mnemonicParsing="false" styleClass="btn" text="Volver" />
+         </children>
+      </VBox>
    </children>
-</VBox>
+</HBox>

@@ -27,12 +27,13 @@ public class ButtonOKController {
     public ComboBox<String> comboBoxConverter;
     
     @FXML
-    public void buttonClicked(Event e) {
+    public void buttonClicked(Event event) {
     	String converter = comboBoxConverter.getValue();
     	
     	try {
     		switch (converter) {
     		case "Moneda":
+    			Launcher.getStage().setTitle("camd | conversor de moneda");;
     			Launcher.setRoot("converter-currency");
     			break;
     		case "Temperatura":
