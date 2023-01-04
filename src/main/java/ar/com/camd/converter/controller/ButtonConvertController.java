@@ -8,6 +8,7 @@ package ar.com.camd.converter.controller;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 
 /**
  * <code>ButtonConvertController</code>
@@ -17,12 +18,18 @@ import javafx.scene.control.ComboBox;
  * @version  1.0.0-SNAPSHOT
  */
 public class ButtonConvertController {
-	
+
 	// fx:id="fromCurrency"
 	private ComboBox fromCurrency;
-	
+
 	// fx:id="toCurrency"
 	private ComboBox toCurrency;
+
+	// fx:id="amount"
+	private TextField amount;
+
+	// fx:id="conversion"
+	private TextField conversion;
 
 	@FXML
 	public void convert(Event event) {
