@@ -15,14 +15,13 @@ package ar.com.camd.converter.model;
 public enum Converter {
 	CURRENCY("moneda"), TEMPERATURE("temperatura");
 
-	private String description;
-	
+	private final String description;
+
 	private Converter(String description) {
 		this.description = description;
 	}
-	
-	public String description() {
+
+	public String getDescription() {
 		return this.description;
 	}
 }
-

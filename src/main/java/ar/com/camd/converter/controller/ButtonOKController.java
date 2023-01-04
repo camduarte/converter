@@ -5,6 +5,7 @@
  */
 package ar.com.camd.converter.controller;
 
+import ar.com.camd.converter.Launcher;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -27,5 +28,21 @@ public class ButtonOKController {
     
     @FXML
     public void buttonClicked(Event e) {
+    	String converter = comboBoxConverter.getValue();
+    	
+    	try {
+    		switch (converter) {
+    		case "Moneda":
+    			Launcher.setRoot("converter-currency");
+    			break;
+    		case "Temperatura":
+    			Launcher.setRoot("converter-temperature");
+    			break;
+    		default:
+    			break;
+    		}
+		} catch (Exception exception) {
+			exception.printStackTrace();
+		}
     }
 }
