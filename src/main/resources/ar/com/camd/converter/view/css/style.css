@@ -1,0 +1,26 @@
+.container {
+    -fx-background-color: #ceffff;
+    -fx-font-family: "Lucida Sans Unicode";
+    -fx-font-size: 14px;
+}
+
+.combo-box {
+    -fx-background-color:#9cd3db; 
+    -fx-font-weight: 700;
+    -fx-text-fill: #464646;
+}
+
+.btn{
+    -fx-background-color: #9cd3db;
+    -fx-background-radius: 25% 10%;;
+    -fx-border-width: 0px;
+    -fx-font-weight: 700;
+    -fx-height: 20px;
+    -fx-padding: 10px;
+    -fx-text-fill: #464646;
+    -fx-width: 32px;
+}
+
+.btn:hover {
+    -fx-background-color: #f7345e;
+}
