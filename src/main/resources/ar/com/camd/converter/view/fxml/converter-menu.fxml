@@ -36,8 +36,8 @@
                   </ComboBox>
                   <HBox alignment="CENTER" prefHeight="59.0" prefWidth="304.0" spacing="16.0">
                      <children>
-                        <Button fx:id="btnOK" onAction="#buttonClicked" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" styleClass="btn" text="Aceptar" />
-                        <Button fx:id="btnCancel" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" styleClass="btn" text="Cancelar" />
+                        <Button fx:id="btnOK" onAction="#selectConverter" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" styleClass="btn" text="Aceptar" />
+                        <Button fx:id="btnCancel" onAction="#closeApplication" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" styleClass="btn" text="Cancelar" />
                      </children>
                   </HBox>
                </children>

@@ -6,9 +6,9 @@
 package ar.com.camd.converter.controller;
 
 import ar.com.camd.converter.Launcher;
+import javafx.application.Platform;
 import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 
 /**
@@ -20,19 +20,15 @@ import javafx.scene.control.ComboBox;
  */
 public class ConverterMenuController {
 
-	// fx:id="btnOK"
-	public Button btnOK;
-
 	// fx:id="comboBoxConverter"
 	public ComboBox<String> comboBoxConverter;
 
 	@FXML
-	public void buttonClicked(Event event) {
+	public void selectConverter(Event event) {
 		String converter = comboBoxConverter.getValue();
 		switch (converter) {
 		case "Moneda":
 			Launcher.getStage().setTitle("camd | conversor de moneda");
-			;
 			Launcher.setRoot("converter-currency");
 			break;
 		case "Temperatura":
@@ -41,5 +37,10 @@ public class ConverterMenuController {
 		default:
 			break;
 		}
+	}
+
+	@FXML
+	public void closeApplication() {
+		Platform.exit();
 	}
 }
