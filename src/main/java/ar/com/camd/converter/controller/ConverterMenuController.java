@@ -28,10 +28,11 @@ public class ConverterMenuController {
 		String converter = comboBoxConverter.getValue();
 		switch (converter) {
 		case "Moneda":
-			Launcher.getStage().setTitle("camd | conversor de moneda");
+			Launcher.getStage().setTitle("camd | Conversor de moneda");
 			Launcher.setRoot("converter-currency");
 			break;
 		case "Temperatura":
+			Launcher.getStage().setTitle("camd | Conversor de temperatura");
 			Launcher.setRoot("converter-temperature");
 			break;
 		default:
