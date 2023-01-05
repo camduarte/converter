@@ -5,7 +5,7 @@
  */
 package ar.com.camd.converter.service;
 
-import ar.com.camd.converter.model.TemperatureConverter;
+import ar.com.camd.converter.model.Temperature;
 import ar.com.camd.converter.model.TemperatureUnit;
 
 /**
@@ -18,8 +18,7 @@ import ar.com.camd.converter.model.TemperatureUnit;
 public class TemperatureServiceImpl implements TemperatureService {
 
 	@Override
-	public TemperatureConverter convert(TemperatureUnit fromUnit, TemperatureUnit toUnit, Double temperature) {
-		// TODO Auto-generated method stub
+	public Temperature convert(TemperatureUnit fromUnit, TemperatureUnit toUnit, Double temperature) {
 		return null;
 	}
 

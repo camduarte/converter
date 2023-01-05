@@ -27,10 +27,10 @@ import javafx.scene.control.TextField;
 public class CurrencyConverterController {
 
 	// fx:id="fromCurrency"
-	public ComboBox fromCurrency;
+	public ComboBox<String> fromCurrency;
 
 	// fx:id="toCurrency"
-	public ComboBox toCurrency;
+	public ComboBox<String> toCurrency;
 
 	// fx:id="amount"
 	public TextField amount;

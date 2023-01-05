@@ -5,7 +5,7 @@
  */
 package ar.com.camd.converter.service;
 
-import ar.com.camd.converter.model.TemperatureConverter;
+import ar.com.camd.converter.model.Temperature;
 import ar.com.camd.converter.model.TemperatureUnit;
 
 /**
@@ -22,8 +22,8 @@ public interface TemperatureService {
 	 * @param fromUnit The temperature unit from which you want to convert. 
 	 * @param toUnit The target temperature unit.
 	 * @param temperature The temperature value.
-	 * @return An TemperatureConverter encapsulating the information.
+	 * @return An Temperature encapsulating the information.
 	 */
-	public TemperatureConverter convert(TemperatureUnit fromUnit, TemperatureUnit toUnit, Double temperature);
+	public Temperature convert(TemperatureUnit fromUnit, TemperatureUnit toUnit, Double temperature);
 	
 }

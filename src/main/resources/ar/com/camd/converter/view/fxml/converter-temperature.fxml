@@ -53,7 +53,7 @@
                     <String fx:value="K" />
                  </value>
             </ComboBox>
-            <TextField fx:id="conversion" disable="true" editable="false" styleClass="result" />
+            <TextField fx:id="value" disable="true" editable="false" styleClass="result" />
             <Button id="btnBack" mnemonicParsing="false" styleClass="btn" text="Volver" onAction="#backToMenu" />
          </children>
       </VBox>
