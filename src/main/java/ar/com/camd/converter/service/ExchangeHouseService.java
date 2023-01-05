@@ -12,7 +12,7 @@ import ar.com.camd.converter.model.ExchangeHouse;
 
 /**
  * <code>ExchangeHouseService</code>
- * Insert class description here.
+ * Represents an exchange house.
  * 
  * @author    Christian Ariel Modesto Duarte <duarte.camd@gmail.com>
  * @version  1.0.0-SNAPSHOT
