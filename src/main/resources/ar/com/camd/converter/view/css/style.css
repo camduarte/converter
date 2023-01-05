@@ -10,6 +10,10 @@
     -fx-text-fill: #464646;
 }
 
+.exchangeAmount {
+    -fx-opacity: 1;
+}
+
 .btn{
     -fx-background-color: #9cd3db;
     -fx-background-radius: 25% 10%;;
