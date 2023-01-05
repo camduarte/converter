@@ -38,9 +38,8 @@ public class Launcher extends Application {
 	/**
 	 * Allows to switch the scene.
 	 * @param fxml The fxml to be loaded.
-	 * @throws IOException
 	 */
-    public static void setRoot(String fxml) throws IOException {
+    public static void setRoot(String fxml) {
         scene.setRoot(loadFXML(fxml));
     }
 
@@ -48,11 +47,16 @@ public class Launcher extends Application {
      * Loads the fxml.
      * @param fxml The fxml file name.
      * @return Component nodes.
-     * @throws IOException
      */
-    private static Parent loadFXML(String fxml) throws IOException {
+    private static Parent loadFXML(String fxml) {
         FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("./view/fxml/" + fxml + ".fxml"));
-        return fxmlLoader.load();
+        Parent parent = null;
+		try {
+			parent = fxmlLoader.load();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+        return parent;
     }
 
 	/**
