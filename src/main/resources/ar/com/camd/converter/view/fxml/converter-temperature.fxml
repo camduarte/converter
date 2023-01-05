@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.collections.FXCollections?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="8.0" styleClass="container" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ar.com.camd.converter.controller.TemperatureConverterController">
    <children>
-      <Label alignment="CENTER" prefHeight="401.0" prefWidth="600.0" text="Conversor de temperatura">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Label>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="8.0">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logo-no-background.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="200.0" spacing="24.0">
+         <children>
+            <ComboBox fx:id="fromUnit" prefHeight="25.0" prefWidth="216.0">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="°C" />
+                        <String fx:value="°F" />
+                        <String fx:value="°R" />
+                        <String fx:value="K" />
+                    </FXCollections>
+                 </items>
+                 <value>
+                    <String fx:value="°C" />
+                 </value>
+            </ComboBox>
+            <TextField fx:id="temperatureValue" promptText="Ingrese la temperatura" />
+            <Button mnemonicParsing="false" onAction="#convert" prefHeight="25.0" prefWidth="196.0" styleClass="btn" text="Convertir" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="200.0" spacing="24.0">
+         <children>
+            <ComboBox fx:id="toUnit" prefHeight="25.0" prefWidth="238.0">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="°C" />
+                        <String fx:value="°F" />
+                        <String fx:value="°R" />
+                        <String fx:value="K" />
+                    </FXCollections>
+                 </items>
+                 <value>
+                    <String fx:value="K" />
+                 </value>
+            </ComboBox>
+            <TextField fx:id="conversion" disable="true" editable="false" styleClass="result" />
+            <Button id="btnBack" mnemonicParsing="false" styleClass="btn" text="Volver" onAction="#backToMenu" />
+         </children>
+      </VBox>
    </children>
-</VBox>
+</HBox>

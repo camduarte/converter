@@ -20,7 +20,7 @@ public enum TemperatureUnit {
 	private TemperatureUnit(String symbol) {
 		this.symbol = symbol;
 	}
-	
+
 	/**
 	 * @return The unit symbol.
 	 */

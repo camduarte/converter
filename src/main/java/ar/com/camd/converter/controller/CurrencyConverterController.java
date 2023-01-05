@@ -50,6 +50,7 @@ public class CurrencyConverterController {
 
 	@FXML
 	public void backToMenu(Event event) {
+		Launcher.getStage().setTitle("camd | Conversor - menú");
 		Launcher.setRoot("converter-menu");
 	}
 }
