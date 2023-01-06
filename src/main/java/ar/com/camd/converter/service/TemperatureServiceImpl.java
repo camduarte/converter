@@ -6,6 +6,7 @@
 package ar.com.camd.converter.service;
 
 import ar.com.camd.converter.model.Temperature;
+import ar.com.camd.converter.model.TemperatureConverter;
 import ar.com.camd.converter.model.TemperatureUnit;
 
 /**
@@ -19,7 +20,10 @@ public class TemperatureServiceImpl implements TemperatureService {
 
 	@Override
 	public Temperature convert(TemperatureUnit fromUnit, TemperatureUnit toUnit, Double temperature) {
-		return null;
+		Temperature fromTemperature = new Temperature(fromUnit, temperature);
+		Temperature toTemperature = new Temperature(toUnit);
+		TemperatureConverter converter = new TemperatureConverter();
+		return converter.convert(fromTemperature, toTemperature);
 	}
 
 }

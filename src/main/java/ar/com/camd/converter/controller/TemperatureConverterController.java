@@ -16,8 +16,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
 /**
- * <code>TemperatureConverterController</code> Controls actions from temperature
- * converter.
+ * <code>TemperatureConverterController</code>
+ * Controls actions from temperature converter.
  * 
  * @author Christian Ariel Modesto Duarte <duarte.camd@gmail.com>
  * @version 1.0.0-SNAPSHOT
@@ -30,11 +30,11 @@ public class TemperatureConverterController {
 	// fx:id="toUnit"
 	public ComboBox<String> toUnit;
 
-	// fx:id="value"
-	public TextField value;
+	// fx:id="temperatureValue"
+	public TextField temperatureValue;
 
-	// fx:id="result"
-	public TextField result;
+	// fx:id="temperatureResult"
+	public TextField temperatureResult;
 
 	@FXML
 	public void convert(Event event) {
@@ -42,8 +42,8 @@ public class TemperatureConverterController {
 		Temperature temperature = temperatureService.convert(
 				TemperatureUnit.valueOf(fromUnit.getValue().toString()),
 				TemperatureUnit.valueOf(toUnit.getValue().toString()), 
-				Double.valueOf(result.getViewOrder()));
-		result.setText(temperature.getValue().toString());
+				Double.valueOf(temperatureValue.getText()));
+		temperatureResult.setText(temperature.getValue().toString());
 	}
 
 	@FXML

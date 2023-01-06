@@ -25,6 +25,13 @@ public class Temperature {
 		this.unit = unit;
 		this.value = value;
 	}
+	
+	/**
+	 * @param unit The temperature unit.
+	 */
+	public Temperature(TemperatureUnit unit) {
+		this.unit = unit;
+	}
 
 	/**
 	 * @return the temperature unit.
@@ -38,6 +45,13 @@ public class Temperature {
 	 */
 	public Double getValue() {
 		return value;
+	}
+
+	/**
+	 * @param value the temperature value to set
+	 */
+	public void setValue(Double value) {
+		this.value = value;
 	}
 
 }
